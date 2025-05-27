@@ -1,0 +1,129 @@
+.signupCon {
+    /* border: solid; */
+    width: 450px;
+    max-height: 80vh;
+    position: fixed;
+    top: 70px;
+    /* bottom: 50px; */
+    z-index: 100;
+    right: 35%;
+    left: 35%;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px 3px #8080807f;
+    background-color: #ffffff;
+    overflow-y: scroll;
+}
+
+.signinCon {
+    /* border: solid;    */
+    box-shadow: 2px 2px 3px 3px #8080807f;
+    width: 450px;
+    max-height: 75vh;
+    position: fixed;
+    top: 180px;
+    /* bottom: 50px; */
+    z-index: 100;
+    right: 35%;
+    left: 35%;
+    padding: 60px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    /* overflow-y: scroll; */
+}
+
+h5{
+    /* border: solid; */
+    text-align: center;
+    font-size: large;
+    font-weight: 300;
+}
+
+.signhead{
+    text-align: center;
+    font-size: small;
+    font-weight: 500 ;
+    color: #999999 ;
+}
+
+.signupCon .close, .signinCon .close{
+    position: relative;
+    top: -70px;
+    width: 30px;
+    cursor: context-menu;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 1px;
+    left: 335px;;
+    border: solid 1px #999999;
+    font-weight: bold;
+}
+
+form .nameCon{
+    /* border: solid; */
+    display: flex;
+}
+
+form .nameCon label,.email label{
+    color: #0c513f;
+    font-size: small;
+}
+
+form .nameCon input{
+    width: 140px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 18px 8px;
+    outline: 2px solid transparent;
+    border: none;
+    border-radius: 5px;
+    background-color: #0c513f14;
+}
+
+.email,.referral,.numb{
+    margin-top: 20px;
+}
+
+.email .inputcone input, .referral .inputcone input , .numb .inputcone input{
+    width: 100%;
+    margin-top: 5px;
+    padding: 18px 8px;
+    outline: 2px solid transparent;
+    border: none;
+    background-color: transparent;
+}
+
+.email .inputcone, .referral .inputcone, .numb .inputcone{
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: #0c513f14;
+    /* border: solid; */
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.nbtnsignup{
+    /* border: solid; */
+    width: 100%;
+    margin: 20px auto;
+}
+
+.errorborder{
+    border: solid 1px #ff0000;
+}
+
+.nbtnsignup button{
+    padding: 10px;
+    background-color:  #0c513f;
+    border-radius: 10px;
+    width: 100%;
+    color: #ffffff;
+}
+
+.nameErro,.mailErro{
+    color: #ff0000;
+    font-size: smaller;
+}

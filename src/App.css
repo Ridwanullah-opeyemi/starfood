@@ -1,0 +1,122 @@
+.homecontainer{
+    width: '90%';
+    /* border: solid; */
+    margin: 0 auto;
+}
+
+.maincon{
+  /* border: solid;   */
+  margin: 120px auto 0;
+  width: 85%;
+}  
+
+
+.maincon .concarti .carcons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* responsive columns */
+    gap: 5px; /* Adjust this value to change the gap */
+    padding: 5px;
+    width: 80%;
+    margin: 10px 0;
+    /* border: solid; */
+}
+
+
+.maincon .concarti h2{
+    font-weight: 150;
+    margin: 20px 0;
+}
+
+.maincon .concarti .cardscarti{
+    /* border: solid; */
+    width: 110px;
+    border-radius: 10px;
+    padding: 13px;
+    height: 120px;
+}
+
+
+.maincon .concarti .cardscarti .imgs{
+    /* border: solid; */
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+.Restaurants{
+    background-color: #ffaac940;
+}
+
+.Fit{
+    background-color: #DAEFE3;
+}
+
+.African{
+    background-color: #FFF8E4;
+}
+
+.Local{
+    background-color: #02C27F23;
+}
+
+.Pharmacy{
+    background-color: #EBF4FF;
+}
+
+.Supermarkets{
+    background-color: #FFF3ED;
+}
+
+.Drinks{
+    background-color: #fff8e4;
+}
+
+
+
+/* maincon02section */
+.maincon02section{
+    /* border: solid; */
+    width: 85%;
+    padding: 10px;
+    margin: 40px auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+
+.relycon{
+    /* border: solid; */
+    width: 49%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1500px) {
+    .maincon .concarti .carcons{
+    width: 95%;
+}
+
+}
+
+
+@media (max-width: 1300px) {
+    .maincon .concarti .carcons{
+        overflow-x: scroll;
+        gap: 25px;
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+}
+
+}

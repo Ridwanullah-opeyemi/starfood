@@ -1,0 +1,302 @@
+header{
+    /* border: solid; */
+    position: fixed;
+    padding: 5px 10px;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+}
+nav{
+    /* border: solid; */
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav .navcon{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .navcon .logoloca{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+ nav .navcon .logoloca img{
+    margin-right: 15px;
+} 
+
+ nav .navcon .logoloca .location{
+    align-items: center;
+    font-size: small;
+}
+
+nav .navcon .usercon{
+    display: flex;
+    /* width: 40%; */
+    align-items: center;
+    gap: 25px;
+    /* justify-content: space-around; */
+}
+
+
+nav .navcon .usercon .searchCon{
+    /* border: solid; */
+    border-radius: 7px;
+    background-color: #f2f2f2;
+    align-content: center;
+    width: 350px;
+    padding-left: 5px;
+    height: 33px;
+    align-items: center;
+    display: flex;
+}
+
+
+.sclose{
+    /* border: solid; */
+    width: 150px;
+    margin-left:  auto;
+}
+
+.sclose button{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+.searchvisible{
+    padding: 20px;
+    width: 84%;
+    height: 80vh;
+    left: 8%;
+    right: 8%;
+    background-color: #fff;
+    top: 100px;
+    overflow-y: scroll;
+    border: solid;
+    position: fixed ;
+}
+
+
+nav .navcon .usercon .searchCon:hover{
+     border: solid 2.5px #0c513f;
+}
+
+nav .navcon .usercon .searchCon svg{
+    font-weight: bold;
+}
+
+
+nav .navcon .usercon .searchCon input{
+    padding: 5px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    width: 100%;
+    border: none;
+    background-color: #f2f2f2;
+}
+
+nav .navcon .usercon .searchCon input:focus{
+    border: none;
+    outline: none;
+}
+
+nav .navcon .cartuser{
+    display: flex;
+    gap: 10px;
+}
+
+nav .navcon .cartuser .cart{
+    border: solid;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+nav .navcon .cartuser .userPofile{
+    border: solid;
+    width: 45px;
+    height: 45px;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+
+.locationbox{
+    border: solid #8080802c;
+    box-shadow: #80808091 80px 180px 200px 570px;
+    padding: 35px;
+    position: fixed;
+    top: 15%;
+    bottom: 15%;
+    transform: translate(-0%, -0%);
+    /* width: 60%; */
+    left: 30%;
+    right: 30%;
+    background-color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 100;
+    /* display: none; */
+}
+
+.searchlocat{
+    border: solid;
+    border-radius: 15px;
+    border: solid #8080802c;
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchlocat input{
+    width: 90%;
+    padding: 10px;
+    border: none;
+    font-size: 17px;
+    border-end-end-radius: 15px;
+    border-start-end-radius: 15px;
+}
+
+.searchlocat input:focus{
+    border: none;
+    outline: none;
+}
+
+
+.cartbox{
+    /* padding: 10px; */
+    width: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #fff;
+    transition: width 0.5s ease-in-out;
+    border: solid;
+    position: absolute;
+}
+
+
+.cartbox .cartnumb{
+    width: 50px;
+    height: 50px;
+    border: solid 1px #80808045;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+
+.cartbox nav{
+    border: solid 1px #80808045;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    align-items: center;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartbox .cartflex {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.cartbox .closexcart{
+    width: 30px;
+    height: 30px;
+    /* border: solid; */
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    border: solid 1px #8080806a;
+    box-shadow: #80808056 2px 2px 3px 3px;
+    cursor: default;
+}
+
+
+.titlelo{
+    display: flex;
+    margin: 20px 0;
+    /* border: solid; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titlelo h5{
+    font-size: large;
+    font-weight: 120;
+}
+
+
+.cansleloc{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: -25px;
+    font-size: larger;
+    font-weight: bolder;
+    border: solid 1px #8080806a;
+    box-shadow: #80808056 2px 2px 3px 3px;
+
+}
+/* .locationboxt{
+    display: none;
+} */
+
+.locationboxf{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1500px) {
+    nav{
+    width: 100%;
+    margin: 0;
+    /* border: none; */
+}
+    header{
+        border: none;
+    }
+}
+
+@media (max-width: 770px) {
+    nav .navcon .usercon .searchCon{
+        /* display: none; */
+        width: 100%;
+        left: 0;
+        top: 65px;
+        position: fixed;
+    }
+    nav .navcon .logoloca{
+        /* border: solid; */
+        width: 200px;
+    }
+}

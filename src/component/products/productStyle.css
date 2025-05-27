@@ -1,0 +1,118 @@
+.productsCon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); /* responsive columns */
+    gap: 20px; /* space between cards */
+    padding: 20px;
+    /* width: 85%; */
+    margin: 10px auto;
+}
+.card {
+    border: solid 1px #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+.proconcarti{
+    margin-top: 35px;
+    text-align: center;
+    border-bottom: solid;
+    width: 500px;
+    margin-inline: auto;
+    font-weight: bold;
+    font-size: xx-large;
+}
+.cardName{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+.card img{
+    width: 100%;
+    /* border: solid; */
+    height: 60%;
+}
+.card .cardPrice strong{
+    text-decoration: line-through;
+}
+.card .cardPrice{
+    margin-bottom: 5px;
+}
+.cardcart{
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    border: solid;
+    background-color: #1f541f;;
+}
+.cartCount{
+    background-color: #ccc;
+    padding: 2px 10px;
+    width: 100px;
+    margin: 0 auto;
+
+    /* border: solid; */
+}
+.addcart{
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    border: solid;
+    padding: 5px;
+}
+ .btn01{    
+    /* border: solid; */
+    font-weight: bold;
+    font-size: larger;
+    margin-right: 5px;
+}
+.btn02{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.cardcart svg{
+    margin-bottom: -10px;
+    font-size: large;
+    /* color: #fff; */
+    margin-left: -15px;
+    z-index: -1; 
+    position: absolute;
+}
+.allproduct{
+    /* border: solid; */
+    padding: 2px;
+    margin: 5px auto 50px;
+    display: block;
+    width: 124px;
+}
+
+.allproduct .allproductbtn{
+    padding: 10px 23.5px;
+    border: solid gray 1px;
+    border-radius: 15px;
+}
+
+.allproduct .allproductbtn:hover{
+    background-color: #000;
+    color: #fff;
+}
+.cardcart span{
+    margin-bottom: -10px;
+    font-size: larger;
+    font-weight: bold;
+    position: relative;
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+    .proconcarti{
+        width: 300px;
+        font-weight: bold;
+        font-size: large;
+    }
+}

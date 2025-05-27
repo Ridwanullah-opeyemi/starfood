@@ -1,0 +1,54 @@
+/* starfoodFlyer.css */
+
+.starfood-footer {
+  background-color: #ffffff; /* Tailwind's gray-900 */
+  color: #0f2f12;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.content_flex{
+  display: flex;
+  /* border: solid; */
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.content_flex .ulflex {
+  display: flex;
+  gap: 5px;
+}
+
+
+.content_flex .ulflex ul{
+  /* border: solid; */
+  text-align: start;
+  /* padding-right: 10px; */
+  margin-right: 10px;
+}
+
+
+.content_flex .ulflex ul h5{
+  font-size: large;
+  margin-bottom: 10px;
+}
+
+
+.content_flex .ulflex ul li{
+  list-style: none;
+  /* padding-right: 10px; */
+}
+
+
+.footer-bottom{
+  width: 90%;
+  margin: 0 auto;
+  padding: 5px;
+  display: flex;
+  color: #80808090;
+  justify-content: space-between;
+}

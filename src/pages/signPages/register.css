@@ -1,0 +1,145 @@
+/* ===== General Container ===== */
+.resCon {
+    padding: 20px;
+    margin: 30px auto;
+}
+
+.resCon h5 {
+    padding: 15px 0;
+    font-size: larger;
+    text-align: center;
+}
+
+/* ===== Form style===== */
+.resCon form {
+    width: 45%;
+    padding: 20px;
+    margin: 30px auto;
+}
+
+.resCon form .inplab {
+    margin-top: 15px;
+    font-size: large;
+}
+
+.resCon form .inplab input,
+.resCon form .inplab select {
+    width: 100%;
+    padding: 10px;
+}
+
+.resCon form .btn {
+    margin: 10px auto;
+    width: 100px;
+}
+
+.resCon form .btn button {
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+/* ===== Date Input Style ===== */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="date"]:focus {
+    border-color: #4f8a8b;
+    outline: none;
+}
+
+/* ===== Checkboxes ===== */
+.chech {
+    padding: 15px 5px;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+}
+
+.chech input {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+/* ===== Spinner ===== */
+.spinner {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    border-top: 2px solid #333;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== Privacy Policy Modal ===== */
+.ppbox {
+    padding: 10px;
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    top: 725px;
+    left: 600px;
+    z-index: 1;
+    overflow-y: auto;
+    background-color: #f3f0f0ea;
+    border-radius: 15px;
+}
+
+.ppbox button {
+    padding: 10px 20px;
+    position: absolute;
+    right: 10px;
+    border-radius: 10px;
+}
+
+.pp {
+    font-weight: bold;
+    color: #131212;
+    display: inline;
+}
+
+/* ===== Error Message ===== */
+.error {
+    color: red;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 500px) {
+    .resCon form {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .resCon form .inplab {
+        margin-top: 20px;
+    }
+
+    .resCon form .inplab input,
+    .resCon form .inplab input[date],
+    .resCon form .inplab select {
+        width: 100%;
+        padding: 12px 8px;
+    }
+
+    .chech {
+        margin-top: -13px;
+        padding: 15px 5px;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+    }
+}
