@@ -17,7 +17,7 @@ const Nav = () => {
 
 
     return (
-        <>
+        <>     
             <header>
                 <nav>
                     <div className="navcon">
