@@ -7,7 +7,7 @@ const Allproducts = () => {
 
   useEffect(() => {
     try {
-      setAllRestaurant(product.splice(5,9));
+      setAllRestaurant(product.splice(5, 9));
     } catch (error) {
       console.log(error);
     }

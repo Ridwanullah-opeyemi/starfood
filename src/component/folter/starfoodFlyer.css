@@ -52,3 +52,16 @@
   color: #80808090;
   justify-content: space-between;
 }
+
+@media (max-width: 750px) {
+  .starfood-footer {
+    background-color: #ffffff; /* Tailwind's gray-900 */
+  color: #0f2f12;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  font-family: 'Arial', sans-serif;
+
+  width: 100%;
+  border: solid;
+  }
+}

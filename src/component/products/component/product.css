@@ -16,7 +16,8 @@
 /* Container for all the restaurant cards */
 .all-products-section__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  /* Responsive grid */
   gap: 30px;
   padding: 10px;
 }
@@ -31,8 +32,10 @@
 }
 
 .restaurant-card:hover {
-  box-shadow: 0 3px 5x rgba(0, 0, 0, 0.1);
-  transform: scale(1.02);
+  box-shadow: 0 3px 5x #00000078;
+  /* transform: scale(1.02); */
+  border: dotted 2px #0000002e;
+  z-index: -10;
 }
 
 /* Image container within the card */
@@ -116,4 +119,12 @@
 
 .all-products-section__more:hover {
   opacity: 0.8;
+}
+
+
+@media (max-width: 750px) {
+  .all-products-section__container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
 }

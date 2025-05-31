@@ -1,31 +1,29 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home";
 import Nav from "./component/navigationbar/navbar";
-import LogIn from "./pages/signPages/logIn";
-import Products from "./component/products/productsCarti";
 import StarFoodFlyer from "./component/folter";
-import Register from "./pages/signPages/register";
-import { CartProvider } from "./contexts/cartContexts";  // ✅ Correct import
+import { CartProvider } from "./contexts/cartContexts";
 import AllProduct from "./component/products/product";
-import Signup from "./component/sign/signup";
-import SignIn from "./component/sign/signin";
+import Notfound from "./component/search/notfound";
+import GeneralSearch from "./component/search/searchinput";
+import ProductProvider from "./contexts/ProductContext";
+
 
 const App = () => {
   return (
     <BrowserRouter>
-      <CartProvider>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product" element={<AllProduct />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/register" element={<Register />} />
-          {/* <Route path="/signup" element={<Signup />} />
-          <Route path="/signin" element={<SignIn />} /> */}
-          {/* <Route path="/register" element={<Register />} /> */}
-        </Routes>
-        <StarFoodFlyer />
-      </CartProvider>
+      <ProductProvider>
+        <CartProvider>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product" element={<AllProduct />} />
+            <Route path="/notfound" element={<Notfound />} />
+            <Route path="/generalSearch" element={<GeneralSearch />} />
+          </Routes>
+          <StarFoodFlyer />
+        </CartProvider>
+      </ProductProvider>
     </BrowserRouter>
   );
 };

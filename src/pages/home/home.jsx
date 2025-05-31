@@ -2,17 +2,19 @@ import Carousel from "../../component/carousel/carousel"
 import Products from "../../component/products/productsCarti"
 import "../../App.css"
 import Handpick from "../../component/products/handpick"
-import SearchInput from "../../component/navigationbar/hooks"
 import Allproducts from "../../component/products/product"
-import Signup from "../../component/sign/signup"
+import GeneralSearch from "../../component/search/searchinput"
+import { useContext } from "react"
+import { productContext } from "../../contexts/ProductContext"
+import Notfound from "../../component/search/notfound"
 
 
 const Home = () => {
+    const { searchQuary, setsearchQuary, filterProduct } = useContext(productContext)
     return (
         <>
             <div className="homecontainer">
-                {/* <Carousel/>
-                <Products/> */}
+
                 <div className="maincon">
                     <div className="concarti">
                         <h2>Explore Categories</h2>
@@ -21,29 +23,29 @@ const Home = () => {
 
                             <div className="cardscarti Restaurants">
                                 <a href="">
-                                <div className="imgs">
-                                    <img width={85} height={50} src="public/image/Restaurants.webp" alt="Restaurants" />
-                                </div>
-                                <h5>Restaurants</h5>
-                                </a>                                    
+                                    <div className="imgs">
+                                        <img width={85} height={50} src="public/image/Restaurants.webp" alt="Restaurants" />
+                                    </div>
+                                    <h5>Restaurants</h5>
+                                </a>
                             </div>
 
                             <div className="cardscarti Supermarkets">
                                 <a href="">
 
-                                <div className="imgs">
-                                    <img width={80} height={45} src="public/image/Supermarkets.webp" alt="Supermarkets" />
-                                </div>
-                                <h5>Supermarkets</h5>
+                                    <div className="imgs">
+                                        <img width={80} height={45} src="public/image/Supermarkets.webp" alt="Supermarkets" />
+                                    </div>
+                                    <h5>Supermarkets</h5>
                                 </a>
                             </div>
                             <div className="cardscarti Pharmacy">
                                 <a href="">
 
-                                <div className="imgs">
-                                    <img width={83} height={45} src="public/image/pharmacy.svg" alt="Pharmacy" />
-                                </div>
-                                <h5>Pharmacy</h5>
+                                    <div className="imgs">
+                                        <img width={83} height={45} src="public/image/pharmacy.svg" alt="Pharmacy" />
+                                    </div>
+                                    <h5>Pharmacy</h5>
                                 </a>
                             </div>
                             <div className="cardscarti Local">
@@ -90,9 +92,21 @@ const Home = () => {
                     </div>
                 </div>
 
-                <Handpick/>
-                <Allproducts/>
-                {/* <Signup/> */}
+                {searchQuary === '' ? (
+                    <>
+                        <Handpick />
+                        <Allproducts />
+                    </>
+                ) :
+                    (filterProduct.length == 0 ? (
+                        <Notfound/>
+                    ) : (
+                        <GeneralSearch />
+                    ))
+
+                }
+
+
             </div>
 
             {/* <SearchInput/> */}

@@ -1,0 +1,20 @@
+.nfcon{
+    width: 500px;
+    text-align: center;
+    margin: 20px auto;
+}
+h2{
+    color: #cf2f2f;
+    font-weight: 300;
+}
+.nfcon .statementn span{
+    color: #253725;
+}
+.nfcon .statementn{
+    color: #25372595;
+}
+.searchproducts{
+    /* border: solid; */
+    width: 85%;
+    margin: 150px auto;
+}

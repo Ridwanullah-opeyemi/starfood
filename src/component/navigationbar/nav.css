@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 header{
     /* border: solid; */
     position: fixed;
@@ -286,17 +292,36 @@ nav .navcon .cartuser .userPofile{
         border: none;
     }
 }
+.cartboxshow{
+    width: 500px;
+}
 
 @media (max-width: 770px) {
     nav .navcon .usercon .searchCon{
         /* display: none; */
         width: 100%;
         left: 0;
-        top: 65px;
+        top: 60px;
         position: fixed;
     }
     nav .navcon .logoloca{
         /* border: solid; */
         width: 200px;
+    }
+    header{
+        top: -5;
+    }
+}
+
+@media (max-width: 770px) {
+    .locationbox{
+        border: solid;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .cartboxshow{
+        width: 100%;
     }
 }

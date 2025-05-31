@@ -81,11 +81,11 @@ form .nameCon input{
     background-color: #0c513f14;
 }
 
-.email,.referral,.numb{
+.email,.referral,.tel{
     margin-top: 20px;
 }
 
-.email .inputcone input, .referral .inputcone input , .numb .inputcone input{
+.email .inputcone input, .referral .inputcone input , .tel .inputcone input{
     width: 100%;
     margin-top: 5px;
     padding: 18px 8px;
@@ -94,7 +94,7 @@ form .nameCon input{
     background-color: transparent;
 }
 
-.email .inputcone, .referral .inputcone, .numb .inputcone{
+.email .inputcone, .referral .inputcone, .tel .inputcone{
     border-radius: 5px;
     margin-bottom: 5px;
     background-color: #0c513f14;
@@ -126,4 +126,52 @@ form .nameCon input{
 .nameErro,.mailErro{
     color: #ff0000;
     font-size: smaller;
+}
+
+
+@media (max-width: 770px) {
+    .signinCon{
+        border: solid;
+        left: 0;
+        right: 0;
+        width: 100%;
+        bottom: 2px;
+        /* height: 50vh; */
+        top: 350px;
+    }
+    .signupCon{
+        border: solid;
+        left: 0;
+        right: 0;
+        width: 100%;
+        bottom: 2px;
+        /* height: 50vh; */
+        top: 300px;
+        padding: 50px 20px;
+    }
+    .signinCon .close{
+    position: relative;
+    top: -70px;
+    width: 30px;
+    cursor: context-menu;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 1px;
+    left: 275px;;
+    /* border: solid 1px #000000; */
+}
+.signupCon .close{
+    top: -30px;
+    left: 310px;
+    /* right: 20px; */
+     /* top: 20pxx;
+    width: 30px;
+    cursor: context-menu;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 1px;
+    left: 230px;; */
+}
 }

@@ -32,7 +32,7 @@
 }
 .card img{
     width: 100%;
-    /* border: solid; */
+    border: solid;
     height: 60%;
 }
 .card .cardPrice strong{

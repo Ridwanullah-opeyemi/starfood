@@ -1,43 +1,38 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import product from "/public/data/product.json"
+import { productContext } from "../../contexts/ProductContext"
 
 const SearchInput = () => {
-    const [filterpro,setfilterpro] = useState([])
-    const [usershow,setusershow] = useState(false)
-    const [searchvisible,setsearchvisible] = useState(false)
-    const [locationtt,setlocationtt] = useState(false)
-    const [locatspin,setlocatspin] = useState(false)
-    const [cartboxshow,setcartboxshow] = useState(false)
+    const {searchQuary,setsearchQuary,filterProduct} = useContext(productContext)
+    const [usershow, setusershow] = useState(false)
+    const [locationtt, setlocationtt] = useState(false)
+    const [locatspin, setlocatspin] = useState(false)
+    const [cartboxshow, setcartboxshow] = useState(false)
+    const [showsign, setshowsign] = useState(false)
 
-   
 
-    const handleinput = (e) => {
-        const searchValue = e.target.value
-
-        const filterProduct = product.filter(p => {
-            console.log(searchValue);
-            return p.name.toLowerCase().includes(searchValue.toLowerCase()) || p.description.toLowerCase().includes(searchValue.toLowerCase())
-        })
-        setfilterpro(filterProduct)
-        setsearchvisible(true)
-
-        if (!filterProduct) {
-            setsearchvisible(false)
-            return
-        }
-        if (!searchValue) {
-            setsearchvisible(false)
-            return
-        }
+    const handleprofileclick = () => {
+        setshowsign(!showsign)
     }
+    const handleclose = () => {
+        setshowsign(!showsign)
+    }
+
+
+
+    
+        const handleinput = (e)=>{
+            const search = e.target.value
+            setsearchQuary(search)
+        }
 
 
 
     const handlelocationbox = () => {
         setlocationtt(true)
     }
-    
-    
+
+
     const handlecartbox = () => {
         setcartboxshow(true)
     }
@@ -51,7 +46,8 @@ const SearchInput = () => {
         if (!e.target.value) {
             setlocatspin(false)
         }
-        if (e.target.value.strim() === "") {
+
+        if (e.target.value.strim() == "") {
             setlocatspin(false)
         }
     }
@@ -62,20 +58,18 @@ const SearchInput = () => {
     }
 
 
-    const visible = ()=>{
-        setsearchvisible(false)
-        const g = document.getElementById("searchvalueid")
-        g.value = ""
-    }
+
+
 
     return {
         handleinput,
-        filterpro,
-        searchvisible,
+        searchQuary,
         locationtt,
-        visible,
         cartboxshow,
+        handleprofileclick,
         handlelocationbox,
+        showsign,
+        handleclose,
         handlelocafionbox,
         handlecartbox,
         handlelocatspin,
