@@ -1,7 +1,8 @@
 /* starfoodFlyer.css */
 
 .starfood-footer {
-  background-color: #ffffff; /* Tailwind's gray-900 */
+  background-color: #ffffff;
+  /* Tailwind's gray-900 */
   color: #0f2f12;
   padding: 3rem 1rem;
   margin-top: 3rem;
@@ -9,7 +10,7 @@
 }
 
 
-.content_flex{
+.content_flex {
   display: flex;
   /* border: solid; */
   width: 90%;
@@ -24,27 +25,25 @@
 }
 
 
-.content_flex .ulflex ul{
-  /* border: solid; */
+.content_flex .ulflex ul {
   text-align: start;
-  /* padding-right: 10px; */
   margin-right: 10px;
 }
 
 
-.content_flex .ulflex ul h5{
+.content_flex .ulflex ul h5 {
   font-size: large;
   margin-bottom: 10px;
 }
 
 
-.content_flex .ulflex ul li{
+.content_flex .ulflex ul li {
   list-style: none;
   /* padding-right: 10px; */
 }
 
 
-.footer-bottom{
+.footer-bottom {
   width: 90%;
   margin: 0 auto;
   padding: 5px;
@@ -55,13 +54,37 @@
 
 @media (max-width: 750px) {
   .starfood-footer {
-    background-color: #ffffff; /* Tailwind's gray-900 */
-  color: #0f2f12;
-  padding: 3rem 1rem;
-  margin-top: 3rem;
-  font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    /* Tailwind's gray-900 */
+    color: #0f2f12;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    border: solid;
+  }
 
-  width: 100%;
-  border: solid;
+  .content_flex .ulflex ul h5 {
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .content_flex {
+    /* border: solid; */
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .content_flex .ulflex ul {
+    margin-right: 8px;
+  }
+
+  .footer-bottom {
+    margin-top: 25px;
   }
 }

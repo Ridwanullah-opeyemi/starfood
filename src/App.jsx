@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home";
 import Nav from "./component/navigationbar/navbar";
 import StarFoodFlyer from "./component/folter";
-import { CartProvider } from "./contexts/cartContexts";
+// import { CartProvider } from "./contexts/cartContexts";
 import AllProduct from "./component/products/product";
 import Notfound from "./component/search/notfound";
 import GeneralSearch from "./component/search/searchinput";
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <ProductProvider>
-        <CartProvider>
+        {/* <CartProvider> */}
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ const App = () => {
             <Route path="/generalSearch" element={<GeneralSearch />} />
           </Routes>
           <StarFoodFlyer />
-        </CartProvider>
+        {/* </CartProvider> */}
       </ProductProvider>
     </BrowserRouter>
   );

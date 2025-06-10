@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import "./nav.css"
 import starfoodImage from '/image/starfood.png';
 import { useContext, useState } from "react";
-import { Cartcontexts } from "../../contexts/cartContexts";
+// import { Cartcontexts } from "../../contexts/cartContexts";
 import SearchInput from "./hooks";
 import Signs from "../../signs/sign";
 import { productContext } from "../../contexts/ProductContext";

@@ -2,15 +2,14 @@ import { useState, useEffect, useContext } from "react";
 import produc from "/public/data/product.json";
 import "./productStyle.css";
 import { Link } from "react-router-dom";
-import { Cartcontexts } from "../../contexts/cartContexts";
+// import { Cartcontexts } from "../../contexts/cartContexts";
 import { productContext } from "../../contexts/ProductContext";
 
 const Products = () => {
-  const { product } = useContext(productContext)
+  const { product,addCart } = useContext(productContext)
 
   const [counts, setCounts] = useState({});
   const [categorySamples, setCategorySamples] = useState([]);
-  const { addCart } = useContext(Cartcontexts);
 
   const max = 25;
 
@@ -62,7 +61,7 @@ const Products = () => {
           <h3>{products.name}</h3>
           <h2>₦{products.price}</h2>
           <div className="prodis">{products.description}</div>
-          <div className="btnc" onClick={() => addCart(products)}> {/* ✅ Pass product */}
+          <div className="btnc" onClick={() => addCart(products)}> ✅ Pass product
               <button>Add to Cart</button>
           </div>
       </div>
