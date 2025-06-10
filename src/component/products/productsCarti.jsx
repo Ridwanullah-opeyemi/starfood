@@ -3,8 +3,11 @@ import produc from "/public/data/product.json";
 import "./productStyle.css";
 import { Link } from "react-router-dom";
 import { Cartcontexts } from "../../contexts/cartContexts";
+import { productContext } from "../../contexts/ProductContext";
 
 const Products = () => {
+  const { product } = useContext(productContext)
+
   const [counts, setCounts] = useState({});
   const [categorySamples, setCategorySamples] = useState([]);
   const { addCart } = useContext(Cartcontexts);
@@ -16,7 +19,7 @@ const Products = () => {
     const seenCategories = new Set();
     const samples = [];
 
-    for (const item of produc) {
+    for (const item of product) {
       if (!seenCategories.has(item.category)) {
         seenCategories.add(item.category);
         samples.push(item);

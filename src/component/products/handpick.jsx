@@ -1,8 +1,10 @@
-import product from "/public/data/products.json";
+import { productContext } from "../../contexts/ProductContext";
 import "./handpick.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const Handpick = () => {
+        const { product,Addcart } = useContext(productContext)
+
     const [handpickedProducts, setHandpickedProducts] = useState([]);
 
     useEffect(() => {
@@ -12,7 +14,7 @@ const Handpick = () => {
         } catch (error) {
             console.log(error);
         }
-    }, []);
+    }, [product]);
 
     return (
         <>

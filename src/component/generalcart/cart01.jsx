@@ -1,26 +1,17 @@
-import "./component/product.css"; // Renamed CSS file
+import "./cart01.css"; // Renamed CSS file
 import { useContext, useEffect, useState } from "react";
 import { productContext } from "../../contexts/ProductContext";
 
-const Allproducts = () => {
-    const { product,addCart } = useContext(productContext)
+const GenCart = () => {
+    const { cart } = useContext(productContext)
   
-  const [allRestaurant, setAllRestaurant] = useState([]);
 
-  useEffect(() => {
-    try {
-      setAllRestaurant(product.splice(5, 9));
-    } catch (error) {
-      console.log(error);
-    }
-  }, [product]);
 
   return (
     <div className="all-products-section">
-      <h2 className="all-products-section__title">All Restaurants</h2>
-      <div className="all-products-section__container">
-        {allRestaurant.map((restaurant) => (
-          <div key={restaurant.id} className="restaurant-card"  onClick={() => addCart(restaurant)}>
+      <div className="all_products" style={{overflowY: "scroll"}}>
+        {cart.map((restaurant,i) => (
+          <div key={i} className="restaurant-cards">
             <div className="restaurant-card__image-container">
               <img
                 src={restaurant.image}
@@ -44,9 +35,8 @@ const Allproducts = () => {
           </div>
         ))}
       </div>
-      <div className="all-products-section__more">More</div>
     </div>
   );
 };
 
-export default Allproducts;
+export default GenCart;

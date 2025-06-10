@@ -1,0 +1,8 @@
+.all_products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive grid */
+    gap: 30px;
+    border: solid;
+    padding: 10px;
+}

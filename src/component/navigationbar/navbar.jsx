@@ -5,15 +5,18 @@ import { useContext, useState } from "react";
 import { Cartcontexts } from "../../contexts/cartContexts";
 import SearchInput from "./hooks";
 import Signs from "../../signs/sign";
+import { productContext } from "../../contexts/ProductContext";
+import GenCart from "../generalcart/cart01";
 
 
 const Nav = () => {
-    const { getTotalQuantity, cart } = useContext(Cartcontexts)
+    const { getTotalQuantity } = useContext(productContext)
 
-    const { handleinput,showsign,handleprofileclick,handleclose,searchQuary, cartboxshow, handlecarfbox, handlecartbox, handlelocatspin, locatspin, locationtt, handlelocafionbox, handlelocationbox } = SearchInput()
+
+    const { handleinput, showsign, handleprofileclick, handleclose, searchQuary, cartboxshow, handlecarfbox, handlecartbox, handlelocatspin, locatspin, locationtt, handlelocafionbox, handlelocationbox } = SearchInput()
     // console.log(filterpro    );
 
- 
+
 
 
     return (
@@ -45,22 +48,34 @@ const Nav = () => {
                                     <input type="text" placeholder="Enter a new address" onChange={handlelocatspin} />
                                     <div className={locatspin ? "spinner" : 'd'} ></div>
                                 </div>
-                                <div style={{display:"none"}}>f</div>
+                                <div style={{ display: "none" }}>f</div>
                             </div>
 
 
-                            <div className={ cartboxshow ? " cartboxshow cartbox" : "cartbox" }>
+                            <div className={cartboxshow ? " cartboxshow cartbox" : "cartbox"}>
                                 <nav>
                                     <div className="cartflex">
                                         <h5>Checkout</h5>
                                         <div className="carttexcon">
 
                                             <svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#000000"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" /></svg>
-                                            Cart <span className="cartnumb">0</span>
+                                            Cart <span className="cartnumb">{getTotalQuantity()}</span>
                                         </div>
                                     </div>
                                     <div className="closexcart" onClick={handlecarfbox}>✕</div>
                                 </nav>
+                                <div className="cartitemcon">
+                                    {
+                                        getTotalQuantity() === 0  ? 'jjjjjjj' : (
+                                            <div className="gcart">
+                                                <GenCart/>
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                                <footer>
+
+                                </footer>
                             </div>
 
                             <div className="cartuser">
