@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react"
-import Carousel from "../carousel/carousel"
-import Handpick from "../products/handpick"
 import "./hooks/search.css"
 import { productContext } from "../../contexts/ProductContext"
+import Handpick from "../products/handpick/handpickproducts"
+import { Link } from "react-router-dom"
 
 
 const GeneralSearch = () => {
@@ -11,34 +11,42 @@ const GeneralSearch = () => {
     return (
         <>
             <Handpick />
+            
             <div className="searchproducts">
 
                 <div className="all-products-section__title">This is your Search results</div>
-                <div className="all-products-section__container" >
+                <div className="all-products-section__container gidcon" >
                     {filterProduct.map((restaurant) => (
-                        <div key={restaurant._id} className="restaurant-card">
-                            <div className="restaurant-card__image-container">
-                                <img
-                                    src={restaurant.image}
-                                    alt={restaurant.name}
-                                    width={100}
-                                    height={100}
-                                    className="restaurant-card__image"
-                                />
-                            </div>
-                            <div className="restaurant-card__info">
-                                <div className="restaurant-card__name-rating">
-                                    <div className="restaurant-card__name">{restaurant.name}</div>
-                                    <div className="restaurant-card__rating">⭐{restaurant.rating}</div>
+                        <div className="itemcon" key={restaurant.id}>
+                            <Link to={`/product/${restaurant.id}`}>
+                                <div className="__image_container">
+                                    <img
+                                        src={restaurant.image}
+                                        alt={restaurant.name}
+                                        className="__image"
+                                    />
                                 </div>
-                                <div className="restaurant-card__delivery-time">
-                                    🕒{restaurant.delivery_time}
+                                <div className="__info">
+                                    <div className="__name_rating">
+                                        <div className="__name">{restaurant.name}</div>
+                                        <div className="__rating">
+                                            ⭐{restaurant.rating}
+                                        </div>
+                                    </div>
+                                    <div className="__delivery_time">
+                                        🕒{restaurant.delivery_time}
+                                    </div>
+                                    <div className="__tags">
+                                        {restaurant.tags && restaurant.tags.join(", ")}
+                                    </div>
+                                    <div className="__category">
+                                        {restaurant.category}{" "}
+                                        <span className="__location">
+                                            {restaurant.location}
+                                        </span>
+                                    </div>
                                 </div>
-                                <div className="restaurant-card__tags">
-                                    {restaurant.tags && restaurant.tags.join(", ")}
-                                </div>
-                                <div className="restaurant-card__category">{restaurant.category} <span className="restaurant-card__location">{restaurant.location}</span></div>
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>

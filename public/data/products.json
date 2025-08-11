@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "1121",
     "name": "Amoke Oge - Oshodi",
     "category": "African",
     "location": "Oshodi",
@@ -11,7 +11,7 @@
     "image": "public/image/amoke-oge-Amola.jpg"
 },
 {
-    "id": "2",
+    "id": "2321",
     "name": "The Place - Ikeja GRA",
     "category": "Nigerian",
     "location": "Ikeja GRA",
@@ -22,7 +22,7 @@
     "image": "public/image/ikejel.jpg"
   },
   {
-    "id": "3",
+    "id": "3112",
     "name": "The Place - Akowonjo",
     "category": "Nigerian",
     "location": "Akowonjo",
@@ -33,7 +33,7 @@
     "image": "public/image/spaghetii.jpg"
   },
   {
-    "id": "4",
+    "id": "4876",
     "name": "Chicken Republic - Oba Akran",
     "category": "Fast Food",
     "location": "Oba Akran",
@@ -44,7 +44,7 @@
     "image": "public/image/chicken-republick.jpg"
   },
   {
-    "id": "5",
+    "id": "5668",
     "name": "King Kiab Cuisine - Maryland",
     "category": "African",
     "location": "Maryland",
@@ -55,7 +55,7 @@
     "image": "king_kiab_cuisine_maryland.jpg"
   },
   {
-    "id": "6",
+    "id": "6322",
     "name": "Sooyah Bistro - Ikeja",
     "category": "Fast Food",
     "location": "Ikeja",
@@ -66,7 +66,7 @@
     "image": "sooyah_bistro_ikeja.jpg"
   },
   {
-    "id": "7",
+    "id": "3237",
     "name": "Papa's Place - Surulere",
     "category": "Fast Food",
     "location": "Surulere",

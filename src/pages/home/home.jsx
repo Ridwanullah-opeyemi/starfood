@@ -7,6 +7,7 @@ import GeneralSearch from "../../component/search/searchinput"
 import { useContext } from "react"
 import { productContext } from "../../contexts/ProductContext"
 import Notfound from "../../component/search/notfound"
+import { Link } from "react-router-dom"
 
 
 const Home = () => {
@@ -22,12 +23,12 @@ const Home = () => {
                         <div className="carcons">
 
                             <div className="cardscarti Restaurants">
-                                <a href="">
+                                <Link to="">
                                     <div className="imgs">
-                                        <img width={85} height={50} src="public/image/Restaurants.webp" alt="Restaurants" />
+                                        <img width={80} height={60} src="public/image/Restaurants.webp" alt="Restaurants" />
                                     </div>
                                     <h5>Restaurants</h5>
-                                </a>
+                                </Link>
                             </div>
 
                             <div className="cardscarti Supermarkets">
@@ -92,6 +93,20 @@ const Home = () => {
                     </div>
                 </div>
 
+
+                <div className="containerg">
+                    <div className="mcon">
+                        <div className="rcon">
+                            <div className="jj">jjfdbhbhdfjhdfdcxknvknvncvjhvcvjvcbn,vcnb,vcnbcvbjc,vj,bcvjhfdjjjjj</div>
+                            <div className="jj">jdjhfgkgdfdhjdfljhldfljj</div>
+                            <div className="jj">kkjkjkfhjhhjvjhdfhvbhvcbcvhbcvcdfj</div>
+                            <div className="jj">jjdhjvkjvnvn,v,bnvchbvdkhgdfuy;oisd;s,bfjjhlsdv</div>
+                            <div className="jj">idcdnkjkfjdff,.dskjfhff,dfsdfjfjdfjjdfih</div>
+                            <div className="jj">hdfsdfuwuioww,.hjljdfjhdfjhlyyeu</div>
+                        </div>
+                    </div>
+                </div>
+
                 {searchQuary === '' ? (
                     <>
                         <Handpick />
@@ -99,7 +114,7 @@ const Home = () => {
                     </>
                 ) :
                     (filterProduct.length == 0 ? (
-                        <Notfound/>
+                        <Notfound />
                     ) : (
                         <GeneralSearch />
                     ))
@@ -108,6 +123,7 @@ const Home = () => {
 
 
             </div>
+
 
             {/* <SearchInput/> */}
 

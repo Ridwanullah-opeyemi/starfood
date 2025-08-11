@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import product from "/public/data/product.json"
+import product from "/public/data/products.json"
 import { productContext } from "../../contexts/ProductContext"
 
 const SearchInput = () => {

@@ -1,5 +1,5 @@
-import Carousel from "../carousel/carousel"
-import Handpick from "../products/handpick"
+import Handpick from "../products/handpick/handpickproducts"
+// import Handpick from "../products/handpick"
 import "./hooks/search.css"
 
 

@@ -1,12 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/home/home";
 import Nav from "./component/navigationbar/navbar";
 import StarFoodFlyer from "./component/folter";
-// import { CartProvider } from "./contexts/cartContexts";
-import AllProduct from "./component/products/product";
-import Notfound from "./component/search/notfound";
-import GeneralSearch from "./component/search/searchinput";
 import ProductProvider from "./contexts/ProductContext";
+import LandingPage from "./pages/landingpage/home";
+import Dash from "./pages/home/dashproduct/dashprod";
 
 
 const App = () => {
@@ -16,10 +13,9 @@ const App = () => {
         {/* <CartProvider> */}
           <Nav />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/product" element={<AllProduct />} />
-            <Route path="/notfound" element={<Notfound />} />
-            <Route path="/generalSearch" element={<GeneralSearch />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/product/:id" element={<Dash />} />
+        
           </Routes>
           <StarFoodFlyer />
         {/* </CartProvider> */}
