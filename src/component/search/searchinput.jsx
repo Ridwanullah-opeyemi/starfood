@@ -3,6 +3,9 @@ import "./hooks/search.css"
 import { productContext } from "../../contexts/ProductContext"
 import Handpick from "../products/handpick/handpickproducts"
 import { Link } from "react-router-dom"
+import Restorance from "../products/restorance/restorance"
+import Discount from "../products/discount/discount"
+import Allproduct from "../products/allproducts/allproduct"
 
 
 const GeneralSearch = () => {
@@ -11,7 +14,10 @@ const GeneralSearch = () => {
     return (
         <>
             <Handpick />
-            
+            <Restorance />
+            <Discount />
+            <Allproduct />
+
             <div className="searchproducts">
 
                 <div className="all-products-section__title">This is your Search results</div>

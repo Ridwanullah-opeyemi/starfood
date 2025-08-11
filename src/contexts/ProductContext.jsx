@@ -41,15 +41,15 @@ const ProductProvider = ({ children }) => {
         const fecthproduct = async () => {
 
             try {
-                // const baseurl = "http://localhost:3001/products"
-                // const res = await fetch(baseurl)
-                // const data = await res.json()
-                // let product = data.products
-                // setproduct(product)
-                console.log(product);
-                const res = await fetch("/data/products.json")
+                const baseurl = "http://localhost:3001/products"
+                const res = await fetch(baseurl)
                 const data = await res.json()
-                setproduct(data)
+                let product = data.products
+                setproduct(product)
+                // console.log(product);
+                // const res = await fetch("/data/products.json")
+                // const data = await res.json()
+                // setproduct(data)
             } catch (error) {
                 console.log(error);
             }
